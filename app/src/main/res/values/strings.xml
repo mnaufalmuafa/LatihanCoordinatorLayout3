@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Latihan Coordinator Layout 3</string>
+    <string name="kontak">Kontak</string>
+    <string name="igd">IGD</string>
+    <string name="informasi">Informasi</string>
+    <string name="Email">Email</string>
 </resources>

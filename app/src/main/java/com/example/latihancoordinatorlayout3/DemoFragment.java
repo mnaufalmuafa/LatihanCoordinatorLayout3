@@ -1,17 +1,22 @@
 package com.example.latihancoordinatorlayout3;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import com.example.latihancoordinatorlayout3.Space;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DemoFragment extends Fragment {
+
     public DemoFragment() {
     }
 
@@ -30,12 +35,11 @@ public class DemoFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_demo, container, false);
         RecyclerView recyclerViewDemo = view.findViewById(R.id.recyclerViewDemo);
         recyclerViewDemo.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerViewDemo.addItemDecoration(new Space(20, 1));
+        recyclerViewDemo.addItemDecoration(new Space(20,1));
         recyclerViewDemo.setAdapter(new DemoAdapter(feedItems(), getContext()));
         return view;
     }
@@ -53,4 +57,6 @@ public class DemoFragment extends Fragment {
         }
         return demoItems;
     }
+
+
 }
